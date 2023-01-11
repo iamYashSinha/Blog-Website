@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs'); -%>
+
+
+<h1><%= Date %></h1>
+ 
+ <hr>
+
+<h3>Blogs</h3>
+     
+<hr>
+
+ <% console.log(posts); %> 
+ 
+
+ 
+  <!-- using for each loop for printing blog title and body-->
+  <% posts.forEach((post)=>{ %> 
+   <h2><%= post.title%></h2> 
+    <p><%= post.content.substring(0,100)+" ..."%> <a href="/posts/<%=post.title%>">Read More</a> </p>
+    <%}); %> 
+
+ 
+
+<%- include('partials/footer.ejs');  -%> 
